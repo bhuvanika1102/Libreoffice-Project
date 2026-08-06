@@ -1,17 +1,31 @@
+import { colors, spacing, sizes, typography } from "../../styles";
+
 export default function MenuBar() {
     return (
       <div
-        style={{
-          height: "36px",
-          background: "#f8f8f8",
-          borderBottom: "1px solid #dcdcdc",
-          display: "flex",
-          alignItems: "center",
-          padding: "0 16px",
-          gap: "20px",
-          fontSize: "14px",
-          userSelect: "none"
-        }}
+      style={{
+        height: sizes.menuBarHeight,
+      
+        background: colors.surface,
+      
+        borderBottom: `1px solid ${colors.border}`,
+      
+        display: "flex",
+      
+        alignItems: "center",
+      
+        padding: `0 ${spacing.md}px`,
+      
+        gap: spacing.lg,
+      
+        fontSize: typography.fontSize.sm,
+      
+        fontFamily: typography.fontFamily,
+      
+        userSelect: "none",
+      
+        color: colors.textPrimary
+      }}
       >
         <span>File</span>
         <span>Edit</span>

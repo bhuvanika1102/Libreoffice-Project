@@ -1,0 +1,3 @@
+export const shadows = {
+    page: "0 0 12px rgba(0,0,0,.15)"
+  };
