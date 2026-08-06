@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+build
+out
+coverage
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Electron
+release
+
+# Turbo
+.turbo
+
+# Cache
+.cache
+
+# TypeScript
+*.tsbuildinfo
