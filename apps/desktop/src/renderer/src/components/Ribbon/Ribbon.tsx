@@ -1,21 +1,49 @@
+import RibbonButton from "./RibbonButton";
+import RibbonGroup from "./RibbonGroup";
+import { ribbonConfig } from "../../data/ribbon/ribbonConfig";
+import commandManager from "../../services/commandManager";
 export default function Ribbon() {
     return (
-      <div
+
+        <div
         style={{
-          height: "42px",
-          background: "#ffffff",
-          borderBottom: "1px solid #dcdcdc",
-          display: "flex",
-          alignItems: "center",
-          paddingLeft: "16px",
-          gap: "24px"
+        display:"flex",
+        background:"#f4f4f4",
+        borderBottom:"1px solid #ddd",
+        height:110
         }}
-      >
-        <span>Home</span>
-        <span>Insert</span>
-        <span>Layout</span>
-        <span>Review</span>
-        <span>View</span>
-      </div>
-    );
-  }
+        >
+        
+        {
+        
+        ribbonConfig.map(group=>(
+        
+        <RibbonGroup
+        key={group.title}
+        title={group.title}
+        >
+        
+        {
+        
+        group.buttons.map(button=>(
+        
+            <RibbonButton
+            key={button.id}
+            label={button.label}
+            onClick={() => commandManager.execute(button.command)}
+          />
+        
+        ))
+        
+        }
+        
+        </RibbonGroup>
+        
+        ))
+        
+        }
+        
+        </div>
+        
+        )
+}
