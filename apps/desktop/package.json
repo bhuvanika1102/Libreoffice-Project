@@ -6,20 +6,27 @@
   "author": "example.com",
   "homepage": "https://electron-vite.org",
   "scripts": {
-  "format": "prettier --write .",
-  "lint": "eslint --cache .",
-  "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
-  "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
-  "typecheck": "npm run typecheck:node && npm run typecheck:web",
-  "start": "electron-vite preview",
-  "dev": "electron-vite dev",
-  "build": "npm run typecheck && electron-vite build"
-},
+    "format": "prettier --write .",
+    "lint": "eslint --cache .",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build"
+  },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
     "@novawriter/commands": "workspace:*",
-    "@novawriter/document-model": "workspace:*"
+    "@novawriter/document-model": "workspace:*",
+    "prosemirror-commands": "^1.7.2",
+    "prosemirror-history": "^1.5.1",
+    "prosemirror-keymap": "^1.2.3",
+    "prosemirror-model": "^1.25.12",
+    "prosemirror-schema-basic": "^1.2.5",
+    "prosemirror-state": "^1.4.4",
+    "prosemirror-view": "^1.42.8"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",

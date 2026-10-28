@@ -1,0 +1,37 @@
+
+.novawriter-editor {
+    width: 100%;
+    min-height: 930px;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .novawriter-editor .ProseMirror {
+    min-height: 930px;
+    outline: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+  .novawriter-editor .ProseMirror p {
+    margin: 0 0 12px;
+  }
+  
+  .novawriter-editor .ProseMirror p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .novawriter-editor .ProseMirror u {
+    text-decoration: underline;
+  }
+  
+  .novawriter-editor .ProseMirror strong {
+    font-weight: 700;
+  }
+  
+  .novawriter-editor .ProseMirror em {
+    font-style: italic;
+  }
+  
