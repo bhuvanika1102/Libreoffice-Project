@@ -1,7 +1,27 @@
 
+import { useCallback, useState } from "react";
+
+import type { DocumentModel } from "@novawriter/document-model";
+import documentModel from "../../services/document";
 import DocumentEditor from "../Editor/DocumentEditor";
 
 export default function Workspace() {
+  const [currentDocument, setCurrentDocument] =
+    useState<DocumentModel>(documentModel);
+
+  const handleDocumentChange = useCallback(
+    (updatedDocument: DocumentModel) => {
+      setCurrentDocument(updatedDocument);
+
+      // Temporary development log for verifying synchronization.
+      console.debug(
+        "[NovaWriter] DocumentModel synchronized:",
+        updatedDocument,
+      );
+    },
+    [],
+  );
+
   return (
     <div
       style={{
@@ -27,7 +47,10 @@ export default function Workspace() {
           color: "#222222",
         }}
       >
-        <DocumentEditor />
+        <DocumentEditor
+          document={currentDocument}
+          onDocumentChange={handleDocumentChange}
+        />
       </div>
     </div>
   );
